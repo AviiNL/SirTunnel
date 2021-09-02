@@ -11,6 +11,3 @@ echo Clean up extra Caddy files
 rm ${caddyGz}
 rm LICENSE
 rm README.md
-
-echo Enable Caddy to bind low ports
-setcap 'cap_net_bind_service=+ep' caddy
