@@ -13,4 +13,4 @@ rm LICENSE
 rm README.md
 
 echo Enable Caddy to bind low ports
-sudo setcap 'cap_net_bind_service=+ep' caddy
+setcap 'cap_net_bind_service=+ep' caddy
