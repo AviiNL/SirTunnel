@@ -1,6 +1,6 @@
 #/bin/bash
 
-caddyVersion=2.1.1
+caddyVersion=2.4.4
 
 echo Download Caddy
 caddyGz=caddy_${caddyVersion}_linux_amd64.tar.gz
