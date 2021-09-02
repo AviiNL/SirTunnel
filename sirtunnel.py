@@ -53,7 +53,7 @@ if __name__ == '__main__':
         for route in routes:
             domain, _, used_port = route['@id'].partition('-')
             if domain == host:
-                LOGGER.error("Host already in use on route: %s:%s", host, used_port)
+                LOGGER.error("Host already in use on route: %s", host)
                 if args.no_duplicates:
                     if not args.replace:
                         LOGGER.critical("Duplicate entry not allowed. Aborting")
