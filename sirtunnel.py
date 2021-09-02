@@ -51,18 +51,8 @@ if __name__ == '__main__':
         outcome = request.urlopen(req).read().decode('utf-8')
         routes = json.loads(outcome)
         for route in routes:
-            domain, _, used_port = route['@id'].partition('-')
-            if domain == host:
-                LOGGER.error("Host already in use on route: %s", host)
-                if args.no_duplicates:
-                    if not args.replace:
-                        LOGGER.critical("Duplicate entry not allowed. Aborting")
-                        sys.exit(1)
-                    else:
-                        delete(route['@id'], caddy_api)
-                        LOGGER.warning("Entry %s has been deleted", route['@id'])
-                else:
-                    LOGGER.warning("Adding entry despite duplicate. This is likely to cause problems")
+            if route['@id'] == host:
+                delete(route['@id'], caddy_api)
 
     caddy_add_route_request = {
         "@id": tunnel_id,
