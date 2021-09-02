@@ -36,7 +36,7 @@ if __name__ == '__main__':
     LOGGER = logging.getLogger(__name__)
     LOGGER.debug("Log level set to debug")
 
-    tunnel_id = host + '-' + port
+    tunnel_id = host
 
     LOGGER.debug("Tunnel id build %s", tunnel_id)
 
@@ -52,8 +52,8 @@ if __name__ == '__main__':
         routes = json.loads(outcome)
         for route in routes:
             domain, _, used_port = route['@id'].partition('-')
-            if domain == host or used_port == port:
-                LOGGER.error("Host or port already in use on route: %s:%s", host, used_port)
+            if domain == host:
+                LOGGER.error("Host already in use on route: %s:%s", host, used_port)
                 if args.no_duplicates:
                     if not args.replace:
                         LOGGER.critical("Duplicate entry not allowed. Aborting")
