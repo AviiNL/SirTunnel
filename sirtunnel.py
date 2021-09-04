@@ -62,8 +62,7 @@ if __name__ == '__main__':
             "upstreams":[{
                 "dial": ':' + port
             }]
-        }],
-        "terminal": "true"
+        }]
     }
 
     caddy_add_error_request = {
