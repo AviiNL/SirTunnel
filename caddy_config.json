@@ -5,7 +5,11 @@
         "sirtunnel": {
           "listen": [":443"],
           "routes": [
-          ]
+          ],
+          "errors": {
+            "routes": [
+            ]
+          }
         }
       }
     }
