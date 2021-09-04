@@ -5,7 +5,16 @@
         "sirtunnel": {
           "listen": [":443"],
           "routes": [
-          ]
+          ],
+          "errors": {
+            "routes": [{
+                "handle": [{
+                  "handler": "static_response",
+                  "body": "Tunnel could not be found"
+                }]
+              }
+            ]
+          }
         }
       }
     }
