@@ -13,9 +13,9 @@ def delete(tunnel_id, caddy_api):
     req = request.Request(method='DELETE', url=delete_url)
     request.urlopen(req)
 
-    delete_error_url = '{}/id/{}'.format(caddy_api, tunnel_id + '-error')
-    error_req = request.Request(method='DELETE', url=delete_error_url)
-    request.urlopen(error_req)
+    # delete_error_url = '{}/id/{}'.format(caddy_api, tunnel_id + '-error')
+    # error_req = request.Request(method='DELETE', url=delete_error_url)
+    # request.urlopen(error_req)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser("SirTunnel", description="An easy way to securely expose a webserver running on one computer via a public URL")
