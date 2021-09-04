@@ -8,9 +8,12 @@
           ],
           "errors": {
             "routes": [{
+                "match": [{
+                  "expression": "*"
+                }],
                 "handle": [{
                   "handler": "static_response",
-                  "body": "Tunnel could not be found"
+                  "body": "Tunnel does not exist"
                 }]
               }
             ]

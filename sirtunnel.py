@@ -62,7 +62,8 @@ if __name__ == '__main__':
             "upstreams":[{
                 "dial": ':' + port
             }]
-        }]
+        }],
+        "terminal": "true"
     }
 
     caddy_add_error_request = {
@@ -91,7 +92,7 @@ if __name__ == '__main__':
 
     while True:
         try:
-            time.sleep(1)
+            time.sleep(10)
             # Quick check that the tunnel still exists
             req = request.Request(method='GET', url=caddy_api + '/id/' + tunnel_id)
             response = request.urlopen(req)
