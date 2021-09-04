@@ -5,19 +5,7 @@
         "sirtunnel": {
           "listen": [":443"],
           "routes": [
-          ],
-          "errors": {
-            "routes": [{
-                "match": [{
-                  "expression": "*"
-                }],
-                "handle": [{
-                  "handler": "static_response",
-                  "body": "Tunnel does not exist"
-                }]
-              }
-            ]
-          }
+          ]
         }
       }
     }
